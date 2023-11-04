@@ -64,7 +64,7 @@ io.on('connection', (socket) => {
 });
 app.use(cors(
   {
-    origin:["http://tout-permis5.vercel.app"],
+    origin:["https://tout-permis5-scpr.vercel.app/"],
     methods:["POST","GET"],
     credential:true
   }
