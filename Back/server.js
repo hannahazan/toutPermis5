@@ -62,7 +62,13 @@ io.on('connection', (socket) => {
     console.log(`${socket.id}: A user connected`);
   })
 });
-app.use(cors())
+app.use(cors(
+  {
+    origin:["http://tout-permis5.vercel.app"],
+    methods:["POST","GET"],
+    credential:true
+  }
+))
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
