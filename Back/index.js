@@ -14,7 +14,7 @@ import routerMessUtil from './Routes/ListeUtilRoute.js';
 
 const app = express()
 const port = process.env.PORT||5000
-const httpServer = createServer();
+/*const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
     origin: "http://localhost:3000"
@@ -61,7 +61,8 @@ io.on('connection', (socket) => {
   socket.on('connect',()=>{
     console.log(`${socket.id}: A user connected`);
   })
-});
+});*/
+
 app.use(cors(
   {
     origin:["https://tout-permis5-rd7j.vercel.app/"],
@@ -97,9 +98,9 @@ async function main() {
     
 }
 
-httpServer.listen(4000,()=>{
+/*httpServer.listen(4000,()=>{
   console.log("connexion réussi port 4000 socket")
-})
+})*/
 app.listen(port, () => {
   console.log(`app listening on port ${port}`)
 console.log(process.env.PORT)})
