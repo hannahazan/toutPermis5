@@ -63,11 +63,7 @@ io.on('connection', (socket) => {
   })
 });
 app.use(cors(
-  {
-    origin:["https://tout-permis5-aymd.vercel.app/"],
-    methods:["POST","GET"],
-    credential:true
-  }
+  
 ))
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
