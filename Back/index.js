@@ -63,7 +63,12 @@ io.on('connection', (socket) => {
   })
 });
 app.use(cors(
-  
+  {
+    origin:["https://tout-permis5-w6nr.vercel.app/"],
+    methods:["GET","POST"],
+    credentials:true
+
+}
 ))
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
