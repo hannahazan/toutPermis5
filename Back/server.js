@@ -13,7 +13,7 @@ import routerBlog from './Routes/BlogRoutes.js';
 import routerMessUtil from './Routes/ListeUtilRoute.js';
 
 const app = express()
-const port = 5000
+const port = process.env.PORT||5000
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
@@ -100,4 +100,5 @@ httpServer.listen(4000,()=>{
   console.log("connexion réussi port 4000 socket")
 })
 app.listen(port, () => {
-  console.log(`app listening on port ${port}`)})
+  console.log(`app listening on port ${port}`)
+console.log(process.env.PORT)})
