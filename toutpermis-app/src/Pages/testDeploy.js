@@ -6,12 +6,12 @@ const TestDeploy=()=>{
     console.log("ça fonctionne bien")
     const onSubmit=()=>{
         axios
-        .post("https://toutpermis3-production.up.railway.app/Users")
+        .get("https://toutpermis3-production.up.railway.app/Users")
         .then((response)=>{(console.log(response.data))     
         })
         .catch(error => {
         console.log(error);
-        alert("Oops!Cette adresse e-mail est déjà utilisée!")
+        alert("Oops!bad request!")
         })
     }
     useEffect(()=>{
